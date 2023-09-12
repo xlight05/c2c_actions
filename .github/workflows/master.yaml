@@ -1,4 +1,4 @@
-name: Daily Performance Tests(u8)
+name: Daily Performance Tests(U7)
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Ballerina Build from Nightly Pack
-      uses: ballerina-platform/ballerina-action@nightly
+      uses: ballerina-platform/ballerina-action@master
       env:
         WORKING_DIR: bal_project
       with:
