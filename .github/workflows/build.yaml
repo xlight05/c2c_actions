@@ -1,0 +1,16 @@
+name: Daily Performance Tests
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Ballerina Build from Nightly Pack
+      uses: ballerina-platform/ballerina-action@nightly
+      env:
+        WORKING_DIR: bal_project
+      with:
+        args:
+          build
